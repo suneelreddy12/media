@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.box {
+  flex: 1;
+  padding: 20px;
+  background-color: lightgreen;
+  border: 2px solid darkgreen;
+  text-align: center;
+}
+
+/* Media query */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+/* When you use flex: 1;, it is shorthand for flex-grow: 1; flex-shrink: 1; flex-basis: 0;. This means:
+
+- The item will grow to fill the available space (relative to other items with flex-grow set).
+- The item will shrink if there is not enough space (relative to other items with flex-shrink set).
+- The item has a base size of 0, meaning it will not take up any extra space by default and will rely entirely on the
+  flex-grow property to determine its size. */
